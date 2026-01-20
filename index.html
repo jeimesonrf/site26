@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ybatech | Inovação e Ancestralidade Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Cores baseadas na Identidade Visual da Ybatech */
+        :root {
+            --yb-cream: #F5EFE6;
+            --yb-brown-dark: #3E2723;
+            --yb-brown-light: #5D4037;
+            --yb-accent: #8D6E63;
+        }
+
+        body {
+            background-color: var(--yb-cream);
+            color: var(--yb-brown-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, var(--yb-brown-dark) 0%, var(--yb-brown-light) 100%);
+        }
+    </style>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel=""apple-touch-icon" href="apple-touch-icon.png">
+
+</head>
+
+<body class="antialiased">
+
+    <nav class="bg-[#3E2723] text-[#F5EFE6] py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3 rounded-full">
+                <img src="logo.png" alt="Ybatech Logo" class="h-12 w-auto brightness-110">
+                <span class="text-2xl font-bold tracking-tighter">YBÁTECH<br></span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium text-sm uppercase tracking-widest">
+                <a href="#produtos" class="hover:text-white transition">Produtos</a>
+                <a href="#tecnologia" class="hover:text-white transition">Tecnologia</a>
+                <a href="mailto:contato@ybatech.com.br"
+                    class="bg-[#F5EFE6] text-[#3E2723] px-4 py-2 rounded shadow hover:bg-white transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mx-auto py-24 px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6 text-[#3E2723]">
+            Ybatech: Inovação e Soluções<br>Inteligentes para o Futuro
+        </h1>
+        <p class="text-xl md:text-2xl text-[#5D4037] max-w-3xl mx-auto mb-10 leading-relaxed italic">
+            Combinando ancestralidade, ciência e tecnologia para transformar o digital.
+        </p>
+        <div class="w-24 h-1 bg-[#8D6E63] mx-auto rounded-full"></div>
+    </header>
+
+    <section id="produtos" class="container mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+            <a href="oficina.ybatech.com.br/landing">
+            <div
+                class="bg-white p-8 rounded-2xl border border-[#D7CCC8] shadow-sm hover:shadow-xl transition-all group">
+                <div class="text-4xl text-[#8D6E63] mb-6 group-hover:scale-110 transition-transform"><i
+                        class="fas fa-tools"></i></div>
+                <h3 class="text-2xl font-bold mb-4">Oficina Ybatech</h3>
+                <p class="text-gray-600 leading-relaxed">SaaS completo para gestão inteligente de oficinas, com controle
+                    rigoroso de OS, estoque e financeiro. </p>
+            </div>
+            </a>
+            <div
+                class="bg-white p-8 rounded-2xl border border-[#D7CCC8] shadow-sm hover:shadow-xl transition-all group">
+                <div class="text-4xl text-[#8D6E63] mb-6 group-hover:scale-110 transition-transform"><i
+                        class="fas fa-atom"></i></div>
+                <h3 class="text-2xl font-bold mb-4">Ybatech Physics</h3>
+                <p class="text-gray-600 leading-relaxed">Plataforma educacional interativa para física. Preparação para o ENEM e resolução de exercícios.</p>
+            </div>
+
+            <div
+                class="bg-white p-8 rounded-2xl border border-[#D7CCC8] shadow-sm hover:shadow-xl transition-all group">
+                <div class="text-4xl text-[#8D6E63] mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-hands-praying"></i></div>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-2xl font-bold">Ilê Digital</h3>
+                    <span
+                        class="bg-amber-100 text-amber-800 text-[10px] px-2 py-1 rounded-full font-bold uppercase">Beta</span>
+                </div>
+                <p class="text-gray-600 leading-relaxed">App focado na comunicação interna de uma comunidade religiosa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" class="container mx-auto px-6 py-20">
+        <div class="bg-[#3E2723] rounded-[2rem] p-10 md:p-16 text-[#F5EFE6] shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold mb-12 border-b border-[#5D4037] pb-4 inline-block">Nossa Stack Tecnológica
+                </h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <ul class="space-y-6 text-lg">
+                        <li class="flex items-center gap-4"><i class="fab fa-python text-2xl opacity-70"></i> Python
+                            (Django)</li>
+                        <li class="flex items-center gap-4"><i class="fab fa-js text-2xl opacity-70"></i> JavaScript /
+                            React & React Native</li>
+                        <li class="flex items-center gap-4"><i class="fab fa-node-js text-2xl opacity-70"></i> NestJS
+                        </li>
+                    </ul>
+                    <ul class="space-y-6 text-lg">
+                        <li class="flex items-center gap-4"><i class="fas fa-database text-2xl opacity-70"></i>
+                            PostgreSQL & MariaDB</li>
+                        <li class="flex items-center gap-4"><i class="fab fa-aws text-2xl opacity-70"></i>
+                            Infrasestrutura AWS Cloud</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="absolute right-[-50px] bottom-[-50px] opacity-10 text-[200px]">
+                <i class="fas fa-microchip"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container mx-auto px-6 py-12 text-center border-t border-[#D7CCC8]">
+        <div class="flex justify-center gap-6 mb-6 text-[#8D6E63]">
+            <a href="#" class="hover:text-[#3E2723] transition text-xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="hover:text-[#3E2723] transition text-xl"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:contato@ybatech.com.br" class="hover:text-[#3E2723] transition text-xl"><i
+                    class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-sm font-medium opacity-70">© 2026 ybatech.com.br | Todos os direitos reservados.</p>
+        <p class="text-[10px] uppercase tracking-widest mt-2 opacity-50">Tecnologia, Ciência e Ancestralidade</p>
+    </footer>
+
+</body>
+
+</html>
