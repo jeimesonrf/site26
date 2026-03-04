@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedido de Exclusão de Dados - Ilê Família Ancestral</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #1d2329;
+      --muted: #5b6570;
+      --border: #d8dee4;
+      --primary: #0b5fff;
+      --danger: #b00020;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 32px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .notice {
+      background: #f0f5ff;
+      border: 1px solid #c8d7ff;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 22px;
+      font-size: 0.96rem;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .required {
+      color: var(--danger);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: inherit;
+      color: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .hint {
+      margin-top: 6px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-top: 2px;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-top: 3px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      width: fit-content;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        margin: 16px auto;
+        padding: 14px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Pedido de Exclusão de Dados</h1>
+      <p class="subtitle">Ilê Família Ancestral - Ybatech</p>
+
+      <div class="notice">
+        Preencha os campos abaixo para solicitar a exclusão da sua conta e dos dados pessoais vinculados.
+        Para sua segurança, poderemos solicitar confirmação adicional de identidade antes de concluir o pedido.
+      </div>
+
+      <form action="mailto:suporte@ybatech.com.br?subject=Pedido%20de%20Exclus%C3%A3o%20de%20Dados" method="post" enctype="text/plain">
+        <div class="grid-2">
+          <div>
+            <label for="nome">Nome completo <span class="required">*</span></label>
+            <input id="nome" name="Nome completo" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">E-mail da conta <span class="required">*</span></label>
+            <input id="email" name="E-mail da conta" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <label for="telefone">Telefone/WhatsApp</label>
+            <input id="telefone" name="Telefone ou WhatsApp" type="tel" autocomplete="tel">
+            <p class="hint">Opcional, usado para contato em caso de divergência de dados.</p>
+          </div>
+          <div>
+            <label for="identificador">Identificador da conta</label>
+            <input id="identificador" name="Identificador da conta (ID/username)" type="text">
+            <p class="hint">Opcional, se você souber seu ID ou nome público no app.</p>
+          </div>
+        </div>
+
+        <div>
+          <label for="motivo">Motivo da exclusão <span class="required">*</span></label>
+          <select id="motivo" name="Motivo da exclusão" required>
+            <option value="">Selecione uma opção</option>
+            <option>Não utilizo mais o aplicativo</option>
+            <option>Preocupação com privacidade</option>
+            <option>Criei conta duplicada</option>
+            <option>Outro motivo</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="detalhes">Detalhes adicionais</label>
+          <textarea id="detalhes" name="Detalhes adicionais" placeholder="Descreva qualquer informação que ajude a localizar e processar seu pedido."></textarea>
+        </div>
+
+        <div class="checkbox">
+          <input id="confirmacao" name="Confirmação de titularidade" type="checkbox" required>
+          <label for="confirmacao">
+            Confirmo que sou titular dos dados desta conta e estou ciente de que alguns dados podem ser mantidos por prazo legal mínimo, conforme LGPD.
+            <span class="required">*</span>
+          </label>
+        </div>
+
+        <button type="submit">Enviar solicitação</button>
+      </form>
+
+      <p class="footer">
+        Canal de atendimento LGPD: <strong>suporte@ybatech.com.br</strong><br>
+        Prazo de resposta inicial: até 15 dias, conforme requisitos legais aplicáveis.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
